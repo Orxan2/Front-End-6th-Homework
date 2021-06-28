@@ -23,7 +23,7 @@ ul, ol {
 body header {
   background-color: #222f3e;
   width: 100%;
-  padding: 10px 0;
+  padding: 25px 0;
 }
 
 body header .networks {
@@ -63,8 +63,8 @@ body header .networks .social-networks nav ul.social-list li {
 }
 
 body header .networks .social-networks nav ul.social-list li a {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   border-radius: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -84,6 +84,12 @@ body header .networks .social-networks nav ul.social-list li a {
 body header .networks .social-networks nav ul.social-list li a:hover {
   background-color: #dcdde1;
   color: #1dd1a1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body header .networks .social-networks nav ul.social-list li:last-of-type {
+  padding-right: 0;
 }
 
 body section {
@@ -149,20 +155,21 @@ body section#info {
 }
 
 body section#info .card {
-  width: 500px;
   margin: 0 auto;
-  padding-top: 50px;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
 }
 
 body section#info .card .card-header h1 {
   color: #1dd1a1;
   font-size: 2em;
+  margin-bottom: 25px;
   text-align: center;
 }
 
 body section#info .card .card-body p {
   color: #dcdde1;
-  font-size: 1em;
+  font-size: 25px;
   line-height: 1.7;
   text-align: center;
 }
@@ -267,13 +274,15 @@ body section#heroes .cards {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body section#heroes .cards .card {
   border: 1px solid black;
   border-radius: 1rem;
-  width: 400px;
-  margin: 25px;
+  width: 325px;
+  margin: 25px 0;
 }
 
 body section#heroes .cards .card .card-header {
@@ -394,16 +403,18 @@ body section#heroes .cards .card:last-of-type {
   margin-right: 0;
 }
 
-body section#womens .cards {
+body section#women .cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-body section#womens .cards .card {
+body section#women .cards .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,6 +425,7 @@ body section#womens .cards .card {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 50px 0;
   background-color: #1dd1a1;
   text-align: center;
   border-radius: 1rem;
@@ -423,22 +435,22 @@ body section#womens .cards .card {
   transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
-body section#womens .cards .card .image-box {
-  width: 275px;
+body section#women .cards .card .image-box {
+  width: 250px;
   height: 200px;
   padding: 15px;
 }
 
-body section#womens .cards .card .image-box a img {
+body section#women .cards .card .image-box a img {
   width: 100%;
   height: 100%;
 }
 
-body section#womens .cards .card h1 {
+body section#women .cards .card h1 {
   color: #dcdde1;
 }
 
-body section#womens .cards .card:hover {
+body section#women .cards .card:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
@@ -454,12 +466,13 @@ body section#youngs .cards {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body section#youngs .cards .card {
   border-radius: 1rem;
-  width: 400px;
-  margin: 25px;
+  width: 350px;
 }
 
 body section#youngs .cards .card .card-header {
@@ -496,6 +509,7 @@ body section#youngs .cards .card .card-body {
 body section#youngs .cards .card .card-body p {
   text-align: center;
   line-height: 1.5;
+  font-size: 19px;
 }
 
 body section#youngs .cards .card .card-footer {
@@ -518,7 +532,7 @@ body section#youngs .cards .card:nth-of-type(2) .circle-image {
 }
 
 body section#youngs .cards .card:nth-of-type(2) p {
-  font-size: 19px;
+  font-size: 23px;
 }
 
 body section#youngs .cards .card:nth-of-type(3) {
@@ -601,8 +615,8 @@ body footer .container ul li {
 body footer .container ul li a {
   color: white;
   font-size: 20px;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -626,6 +640,24 @@ body footer .container ul li a:hover {
   .container {
     width: 960px;
   }
+  section#women .cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section#women .cards .image-box {
+    width: 350px !important;
+    height: 250px !important;
+  }
+  section#youngs .card {
+    width: 320px !important;
+  }
+  section#youngs .card p {
+    font-size: 18px;
+  }
+  section#youngs .card:nth-of-type(2) p {
+    font-size: 21px !important;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -646,7 +678,13 @@ body footer .container ul li a:hover {
   .menu-list {
     display: none !important;
   }
-  .founders {
+  section#info .card h1 {
+    font-size: 1em;
+  }
+  section#info .card p {
+    font-size: 20px;
+  }
+  section#info .founders {
     -webkit-transform: translateY(0) !important;
             transform: translateY(0) !important;
     -webkit-box-orient: vertical;
@@ -654,6 +692,11 @@ body footer .container ul li a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 0 50px;
+    margin-top: 150px;
+  }
+  section#youngs .cards {
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
   }
 }
 
@@ -661,14 +704,48 @@ body footer .container ul li a:hover {
   .container {
     width: 540px;
   }
+  section#heroes .cards {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  section#women .cards {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  section#women .cards .image-box {
+    height: 300px !important;
+    width: 400px !important;
+  }
+  section#youngs .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section#youngs .cards .card {
+    width: 500px !important;
+    padding: 25px 10px;
+  }
+  section#youngs .cards .card p {
+    font-size: 22px !important;
+  }
+  section#youngs .cards .card:nth-of-type(2) {
+    -webkit-transform: translateY(0) !important;
+            transform: translateY(0) !important;
+  }
+  section#youngs .cards .card:nth-of-type(2) p {
+    font-size: 24px !important;
+  }
 }
 
 @media screen and (max-width: 576px) {
   .container {
     width: 100% !important;
-  }
-  .social-networks {
-    margin-right: 10px;
   }
   .site-name h1 {
     font-size: 1.5em;
@@ -676,6 +753,9 @@ body footer .container ul li a:hover {
   }
   .nav-brand a {
     margin-left: 10px;
+  }
+  section#info .card p {
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=style.css.map */

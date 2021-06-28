@@ -5,7 +5,7 @@ body {
     header {
         background-color: $bg-navy;
         width: 100%;
-        padding: 10px 0;
+        padding: 25px 0;
 
         .networks {
             display: flex;
@@ -31,8 +31,8 @@ body {
                             padding: 0 5px;
 
                             a {
-                                width: 25px;
-                                height: 25px;
+                                width: 30px;
+                                height: 30px;
                                 border-radius: 20%;
                                 display: flex;
                                 justify-content: center;
@@ -45,7 +45,12 @@ body {
                             a:hover {
                                 background-color: $bg-gray;
                                 color: $bg-green;
+                                transform: scale(1.2);
                             }
+                        }
+
+                        li:last-of-type {
+                            padding-right: 0;
                         }
                     }
                 }
@@ -107,14 +112,17 @@ body {
         background-color: $bg-navy;
 
         .card {
-            width: 500px;
+            // width: 700px;
             margin: 0 auto;
-            padding-top: 50px;
+            // padding-top: 100px;
+            transform: translateY(50%);
 
             .card-header {
                 h1 {
                     color: $bg-green;
                     font-size: 2em;
+                    margin-bottom: 25px;
+
                     text-align: center;
                 }
             }
@@ -122,7 +130,8 @@ body {
             .card-body {
                 p {
                     color: $bg-gray;
-                    font-size: 1em;
+                    // font-size: 1em;
+                    font-size: 25px;
                     line-height: 1.7;
                     text-align: center;
                 }
@@ -195,18 +204,21 @@ body {
 
     section#heroes {
         padding-top: 150px;
+
         .cards {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
 
             .card {
                 border: 1px solid black;
                 border-radius: 1rem;
-                width: 400px;
-                margin: 25px;
+                width: 325px;
+                margin: 25px 0;
 
                 .card-header {
                     padding: 10px;
+
                     .image-box {
                         // width: 300px;
                         height: 200px;
@@ -302,22 +314,24 @@ body {
         }
     }
 
-    section#womens {
+    section#women {
         .cards {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
 
             .card {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                margin: 50px 0;
                 background-color: $bg-green;
                 text-align: center;
                 border-radius: 1rem;
                 transition: transform 0.2s linear;
 
                 .image-box {
-                    width: 275px;
+                    width: 250px;
                     height: 200px;
                     padding: 15px;
 
@@ -346,11 +360,12 @@ body {
         .cards {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
 
             .card {
                 border-radius: 1rem;
-                width: 400px;
-                margin: 25px;
+                width: 350px;
+                // margin: 25px;
 
                 .card-header {
                     padding: 25px;
@@ -380,6 +395,7 @@ body {
                     p {
                         text-align: center;
                         line-height: 1.5;
+                        font-size: 19px;
                     }
                 }
 
@@ -402,7 +418,7 @@ body {
                 }
 
                 p {
-                    font-size: 19px;
+                    font-size: 23px;
                 }
             }
 
@@ -423,7 +439,6 @@ body {
                 padding: 30px 0;
 
                 nav {
-
                     ul.social-list {
                         display: flex;
 
@@ -459,7 +474,6 @@ body {
             }
 
             ul {
-               
                 padding: 25px;
                 h1 {
                     color: $bg-green;
@@ -470,14 +484,11 @@ body {
                     a {
                         color: white;
                         font-size: 20px;
-                        transition: all .2s linear;
+                        transition: all 0.2s linear;
                         display: flex;
                         padding: 5px 15px;
-
-                       
-                        
                     }
-                    a:hover{
+                    a:hover {
                         background-color: white;
                         color: $bg-navy;
                         // color: $bg-green;
@@ -485,7 +496,6 @@ body {
                         box-shadow: 0 0 20px 10px $bg-green;
                         border-radius: 50rem;
                         justify-content: center;
-                       
                     }
                 }
             }
@@ -496,6 +506,33 @@ body {
 @media screen and (max-width: 1200px) {
     .container {
         width: 960px;
+    }
+
+    section#women {
+        .cards {
+            justify-content: center;
+
+            .image-box {
+                width: 350px !important;
+                height: 250px !important;
+            }
+        }
+    }
+
+    section#youngs {
+        .card {
+            width: 320px !important;
+
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .card:nth-of-type(2) {
+            p {
+                font-size: 21px !important;
+            }
+        }
     }
 }
 
@@ -518,25 +555,81 @@ body {
     .menu-list {
         display: none !important;
     }
-    .founders {
-        transform: translateY(0) !important;
-        flex-direction: column;
-        padding: 0 50px;
+    section#info {
+        .card {
+            h1 {
+                font-size: 1em;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+
+        .founders {
+            transform: translateY(0) !important;
+            flex-direction: column;
+            padding: 0 50px;
+            margin-top: 150px;
+        }
     }
+    section#youngs {
+        .cards {
+           justify-content: space-around !important;  
+        }
+    }
+   
 }
 
 @media screen and (max-width: 768px) {
     .container {
         width: 540px;
     }
+
+    section#heroes {
+        .cards {
+            justify-content: center !important;
+        }
+    }
+
+    section#women {
+        .cards {
+            justify-content: center !important;
+
+            .image-box {
+                height: 300px !important;
+                width: 400px !important;
+            }
+        }
+    }
+
+    section#youngs {
+        .cards {
+            flex-direction: column;
+            align-items: center;
+
+            .card {
+                width: 500px !important;
+                padding: 25px 10px;
+
+                p {
+                    font-size: 22px !important;
+                }
+            }
+
+            .card:nth-of-type(2) {
+                transform: translateY(0) !important;
+
+                p {
+                    font-size: 24px !important;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 576px) {
     .container {
         width: 100% !important;
-    }
-    .social-networks {
-        margin-right: 10px;
     }
     .site-name {
         h1 {
@@ -547,6 +640,14 @@ body {
     .nav-brand {
         a {
             margin-left: 10px;
+        }
+    }
+
+    section#info {
+        .card {
+            p {
+                font-size: 18px;
+            }
         }
     }
 }
