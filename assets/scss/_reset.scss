@@ -5,6 +5,9 @@
     box-sizing: border-box;
 
 }
+// html{
+//     scroll-behavior: smooth;
+// }
 a{
     text-decoration: none;
     transition: all .2s linear;
@@ -18,4 +21,12 @@ ul,ol{
     
     // display: flex;
     // justify-content: space-between;
+}
+.heading{
+    text-align: center;
+
+    h1{
+        font-size: 50px;
+        color: $bg-green;
+    }
 }
