@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -11,7 +10,6 @@ html {
 
 a {
   text-decoration: none;
-  -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
 
@@ -33,6 +31,15 @@ ul, ol {
   color: #1dd1a1;
 }
 
+.active {
+  background-color: #1dd1a1;
+}
+
+.active a {
+  color: #fff !important;
+  text-shadow: 0 0 10px #fff;
+}
+
 body header {
   background-color: #222f3e;
   width: 100%;
@@ -40,12 +47,8 @@ body header {
 }
 
 body header .networks {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 body header .networks .site-name {
@@ -57,12 +60,8 @@ body header .networks .site-name h1 {
 }
 
 body header .networks .social-networks nav ul.social-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 body header .networks .social-networks nav ul.social-list li {
@@ -73,28 +72,19 @@ body header .networks .social-networks nav ul.social-list li a {
   width: 35px;
   height: 35px;
   border-radius: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: #1dd1a1;
   color: #dcdde1;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
 body header .networks .social-networks nav ul.social-list li a:hover {
   background-color: #dcdde1;
   color: #1dd1a1;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-box-shadow: 0 0 20px 2px #1dd1a1;
-          box-shadow: 0 0 20px 2px #1dd1a1;
+  transform: scale(1.2);
+  box-shadow: 0 0 20px 2px #1dd1a1;
 }
 
 body header .networks .social-networks nav ul.social-list li:last-of-type {
@@ -106,85 +96,64 @@ body header .networks .social-networks p {
   color: #fff;
 }
 
-body section {
+body section#menu {
   background-color: #dcdde1;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
-body section .menu-and-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
+body section#menu .menu-and-logo {
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
-body section .menu-and-logo .nav-brand {
+body section#menu .menu-and-logo .nav-brand {
   height: 50px;
   margin: 15px 0;
 }
 
-body section .menu-and-logo .nav-brand a img {
+body section#menu .menu-and-logo .nav-brand a img {
   height: 100%;
 }
 
-body section .menu-and-logo .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
+body section#menu .menu-and-logo .menu {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
-body section .menu-and-logo .menu nav #bar-logo {
+body section#menu .menu-and-logo .menu nav #bar-logo {
   display: none;
 }
 
-body section .menu-and-logo .menu nav ul.menu-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
+body section#menu .menu-and-logo .menu nav ul.menu-list {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
-body section .menu-and-logo .menu nav ul.menu-list li.menu-list-item {
+body section#menu .menu-and-logo .menu nav ul.menu-list li.menu-list-item {
   margin: 10px 0;
+  border-radius: 50rem;
+  padding: 5px 15px;
+  transition: all 0.2s linear;
+  font-weight: 700;
 }
 
-body section .menu-and-logo .menu nav ul.menu-list li.menu-list-item a {
+body section#menu .menu-and-logo .menu nav ul.menu-list li.menu-list-item a {
   color: #1dd1a1;
   font-size: 20px;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  padding: 5px 15px;
 }
 
-body section .menu-and-logo .menu nav ul.menu-list li.menu-list-item a:hover {
+body section#menu .menu-and-logo .menu nav ul.menu-list li.menu-list-item:hover {
   background-color: #fff;
-  color: #222f3e;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-box-shadow: 0 0 20px 10px #1dd1a1;
-          box-shadow: 0 0 20px 10px #1dd1a1;
+  color: #222f3e !important;
+  transform: scale(1.2);
+  box-shadow: 0 0 20px 10px #1dd1a1;
   border-radius: 50rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 5px 15px !important;
-}
-
-body section .menu-and-logo .menu nav ul.menu-list li.menu-list-item:last-of-type {
-  margin-right: 0;
-}
-
-body section .menu-and-logo .menu nav ul.menu-list li.menu-list-item:last-of-type a {
-  padding-right: 0;
 }
 
 body section#info {
@@ -198,8 +167,7 @@ body section#info {
 
 body section#info .card {
   margin: 0 auto;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  transform: translateY(50%);
 }
 
 body section#info .card .card-header h1 {
@@ -219,30 +187,19 @@ body section#info .card .card-body p {
 }
 
 body section#info .card .card-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 25px 0;
 }
 
 body section#info .card .card-footer a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 175px;
   height: 40px;
   background-color: #1dd1a1;
   color: #dcdde1;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   font-size: 30px;
   border-radius: 50rem;
@@ -257,46 +214,27 @@ body section#info .card .card-footer a:hover {
 body section#info .card .card-footer a:hover {
   background-color: #fff;
   color: #222f3e;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-box-shadow: 0 0 20px 10px #1dd1a1;
-          box-shadow: 0 0 20px 10px #1dd1a1;
+  transform: scale(1.2);
+  box-shadow: 0 0 20px 10px #1dd1a1;
   border-radius: 50rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 body section#info .founders {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  justify-content: space-evenly;
+  transform: translateY(50%);
 }
 
 body section#info .founders .founder {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   background-color: #fff;
   text-align: center;
   border-radius: 1rem;
   line-height: 2;
-  -webkit-transition: -webkit-transform 0.2s linear;
-  transition: -webkit-transform 0.2s linear;
   transition: transform 0.2s linear;
-  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
   margin: 50px 0;
   padding: 10px 0;
 }
@@ -313,23 +251,18 @@ body section#info .founders .founder .image-box a img {
 }
 
 body section#info .founders .founder:hover {
-  -webkit-transform: rotateY(360deg) scale(1.2);
-          transform: rotateY(360deg) scale(1.2);
+  transform: rotateY(360deg) scale(1.2);
 }
 
 body section#heroes {
+  background-color: #dcdde1;
   padding: 200px 0 100px;
 }
 
 body section#heroes .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 body section#heroes .cards .card {
@@ -337,7 +270,6 @@ body section#heroes .cards .card {
   border-radius: 1rem;
   width: 325px;
   margin: 25px 0;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
@@ -374,14 +306,9 @@ body section#heroes .cards .card .card-footer {
 }
 
 body section#heroes .cards .card .card-footer .details {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding: 15px;
 }
 
@@ -390,34 +317,22 @@ body section#heroes .cards .card .card-footer .details a.button {
   color: #dcdde1;
   border-radius: 50rem;
   padding: 5px 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 body section#heroes .cards .card .card-footer .details a.button:hover {
   background-color: #dcdde1;
   color: #0f6b52;
-  -webkit-box-shadow: 0 0 10px black;
-          box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
   font-weight: bolder;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 body section#heroes .cards .card .card-footer .details ul.icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 body section#heroes .cards .card .card-footer .details ul.icons li {
@@ -427,15 +342,9 @@ body section#heroes .cards .card .card-footer .details ul.icons li {
 body section#heroes .cards .card .card-footer .details ul.icons li a.opinions {
   background-color: #1dd1a1;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding: 8px;
   color: #dcdde1;
 }
@@ -443,11 +352,9 @@ body section#heroes .cards .card .card-footer .details ul.icons li a.opinions {
 body section#heroes .cards .card .card-footer .details ul.icons li a.opinions:hover {
   background-color: #dcdde1;
   color: #0f6b52;
-  -webkit-box-shadow: 0 0 10px black;
-          box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
   font-weight: bolder;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 body section#heroes .cards .card:first {
@@ -459,46 +366,30 @@ body section#heroes .cards .card:last-of-type {
 }
 
 body section#heroes .cards .card:hover {
-  -webkit-box-shadow: 0 0 20px black;
-          box-shadow: 0 0 20px black;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  box-shadow: 0 0 20px black;
+  transform: scale(1.1);
 }
 
 body section#women {
+  background-color: #dcdde1;
   padding: 100px 0;
 }
 
 body section#women .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 body section#women .cards .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin: 50px 0;
   background-color: #fff;
   text-align: center;
   border-radius: 1rem;
-  -webkit-transition: -webkit-transform 0.2s linear;
-  transition: -webkit-transform 0.2s linear;
   transition: transform 0.2s linear;
-  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
 body section#women .cards .card .image-box {
@@ -516,11 +407,11 @@ body section#women .cards .card h1 {
 }
 
 body section#women .cards .card:hover {
-  -webkit-transform: rotateY(360deg) scale(1.2);
-          transform: rotateY(360deg) scale(1.2);
+  transform: rotateY(360deg) scale(1.2);
 }
 
 body section#youngs {
+  background-color: #dcdde1;
   padding: 100px 0;
 }
 
@@ -529,34 +420,22 @@ body section#youngs .heading {
 }
 
 body section#youngs .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 body section#youngs .cards .card {
   border-radius: 1rem;
   width: 350px;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
 body section#youngs .cards .card .card-header {
   padding: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
 }
 
@@ -565,19 +444,13 @@ body section#youngs .cards .card .card-header .circle-image {
   height: 150px;
   border-radius: 50%;
   background-color: #222f3e;
-  -webkit-transition: -webkit-transform 0.2s linear;
-  transition: -webkit-transform 0.2s linear;
   transition: transform 0.2s linear;
-  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
   padding: 20px;
   overflow: hidden;
 }
 
 body section#youngs .cards .card .card-header .circle-image a img {
-  -webkit-transition: -webkit-transform 0.2s linear;
-  transition: -webkit-transform 0.2s linear;
   transition: transform 0.2s linear;
-  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
   width: 100%;
   height: 100%;
 }
@@ -600,21 +473,14 @@ body section#youngs .cards .card .card-body p {
 body section#youngs .cards .card .card-footer {
   text-align: center;
   padding: 25px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 body section#youngs .cards .card .card-footer a {
   color: black;
   font-size: 20px;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 5px 15px;
   margin-top: 20px;
@@ -625,8 +491,7 @@ body section#youngs .cards .card:nth-of-type(1) {
 }
 
 body section#youngs .cards .card:nth-of-type(2) {
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
+  transform: translateY(-50px);
 }
 
 body section#youngs .cards .card:nth-of-type(2) .circle-image {
@@ -643,15 +508,13 @@ body section#youngs .cards .card:nth-of-type(3) {
 }
 
 body section#youngs .cards .card:hover {
-  -webkit-box-shadow: 0 0 20px black;
-          box-shadow: 0 0 20px black;
+  box-shadow: 0 0 20px black;
   background-color: #222f3e;
   color: #dcdde1;
 }
 
 body section#youngs .cards .card:hover .card-header {
-  -webkit-box-shadow: 0 0 20px #dcdde1;
-          box-shadow: 0 0 20px #dcdde1;
+  box-shadow: 0 0 20px #dcdde1;
   background-color: #dcdde1;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
@@ -663,8 +526,7 @@ body section#youngs .cards .card:hover .card-header .circle-image {
 }
 
 body section#youngs .cards .card:hover .card-header .circle-image img {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 body section#youngs .cards .card:hover h1 {
@@ -680,13 +542,9 @@ body section#youngs .cards .card:hover .card-footer a {
 body section#youngs .cards .card:hover .card-footer a:hover {
   background-color: #fff;
   color: #222f3e;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-box-shadow: 0 0 20px 10px #1dd1a1;
-          box-shadow: 0 0 20px 10px #1dd1a1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  transform: scale(1.2);
+  box-shadow: 0 0 20px 10px #1dd1a1;
+  justify-content: center;
 }
 
 body footer {
@@ -694,14 +552,9 @@ body footer {
 }
 
 body footer .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 body footer .container .social-networks {
@@ -709,8 +562,6 @@ body footer .container .social-networks {
 }
 
 body footer .container .social-networks nav ul.social-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -722,28 +573,19 @@ body footer .container .social-networks nav ul.social-list li a {
   width: 35px;
   height: 35px;
   border-radius: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: #1dd1a1;
   color: #dcdde1;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
 body footer .container .social-networks nav ul.social-list li a:hover {
   background-color: #dcdde1;
   color: #1dd1a1;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-box-shadow: 0 0 20px 2px #1dd1a1;
-          box-shadow: 0 0 20px 2px #1dd1a1;
+  transform: scale(1.2);
+  box-shadow: 0 0 20px 2px #1dd1a1;
 }
 
 body footer .container .social-networks p {
@@ -767,10 +609,7 @@ body footer .container ul li {
 body footer .container ul li a {
   color: #fff;
   font-size: 20px;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 5px 15px;
 }
@@ -778,14 +617,10 @@ body footer .container ul li a {
 body footer .container ul li a:hover {
   background-color: #fff;
   color: #222f3e;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-box-shadow: 0 0 20px 10px #1dd1a1;
-          box-shadow: 0 0 20px 10px #1dd1a1;
+  transform: scale(1.2);
+  box-shadow: 0 0 20px 10px #1dd1a1;
   border-radius: 50rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1200px) {
@@ -793,8 +628,7 @@ body footer .container ul li a:hover {
     width: 960px;
   }
   section#women .cards {
-    -ms-flex-pack: distribute !important;
-        justify-content: space-around !important;
+    justify-content: space-around !important;
   }
   section#women .cards .image-box {
     width: 350px !important;
@@ -810,8 +644,7 @@ body footer .container ul li a:hover {
     font-size: 21px !important;
   }
   section#heroes .cards {
-    -ms-flex-pack: distribute !important;
-        justify-content: space-around !important;
+    justify-content: space-around !important;
   }
 }
 
@@ -840,26 +673,19 @@ body footer .container ul li a:hover {
     font-size: 20px;
   }
   section#info .founders {
-    -webkit-transform: translateY(0) !important;
-            transform: translateY(0) !important;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    transform: translateY(0) !important;
+    flex-direction: column;
     padding: 0 50px;
     margin-top: 150px;
   }
   section#youngs .cards {
-    -ms-flex-pack: distribute !important;
-        justify-content: space-around !important;
+    justify-content: space-around !important;
   }
   footer .social-networks {
     width: 100% !important;
   }
   footer .social-networks ul.social-list {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
 
@@ -874,27 +700,18 @@ body footer .container ul li a:hover {
     font-size: 18px !important;
   }
   section#heroes .cards {
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    justify-content: center !important;
   }
   section#women .cards {
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    justify-content: center !important;
   }
   section#women .cards .image-box {
     height: 300px !important;
     width: 400px !important;
   }
   section#youngs .cards {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   section#youngs .cards .card {
     width: 400px !important;
@@ -904,17 +721,13 @@ body footer .container ul li a:hover {
     font-size: 22px !important;
   }
   section#youngs .cards .card:nth-of-type(2) {
-    -webkit-transform: translateY(0) !important;
-            transform: translateY(0) !important;
+    transform: translateY(0) !important;
   }
   section#youngs .cards .card:nth-of-type(2) p {
     font-size: 24px !important;
   }
   footer .responsive-footer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
